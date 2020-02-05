@@ -1,0 +1,20 @@
+name: Current and recent work (selected)
+source:
+  - icon: fa fa-github
+    title: "{ctar}"
+    url: https://github.com/willdebras/ctar
+    description: "ctar is an R package built to interface with the Chicago Transit Authority's various APIs. It allows an R users to query live data on train and bus positions, as well as have access to shapefiles for routes, information about disability accessibility, and more. It was the topic of a recent Chicago R Users Group meetup."
+
+  - icon: fa fa-globe
+    title: Spatial analysis research
+    description: My paper entitled "Assessing the Influence of Spatial Indicators on Political Involvement in Rural America" has been presented at MAPOR 2019 and has been accepted for presentation at MPSA 2020. The paper uses geocoded addresses of survey respondents mapped to satellite data serving as a proxy for development to understand how spatiality relates to a voter's likelihood to be contacted and receive information from political campaigns.
+  
+  - icon: fa fa-globe
+    title: American Press Institute white paper
+    url: https://www.americanpressinstitute.org/publications/reports/survey-research/how-the-press-and-public-can-find-common-purpose/single-page/
+    description: THis white paper with the American Press Institute entitled "How the Press and Public Can Find Common Purpose" assesses Americans' views on their own ability to challenge authority and its relationship to how they view the press' role and efficacy in overseeing and providing a check on authority.
+
+  - icon: fa fa-github
+    title: Vision Zero Dashboard
+    url: https://github.com/willdebras/vision-zero-dashboard
+    description: As part of the Vision Zero initiative to eliminate traffic fatalities across the country, the City of Chicago has been openly developing a dashboard to visualize and map traffic fatalities to help policy makers and the public better understand the problem and how to develop a solution.

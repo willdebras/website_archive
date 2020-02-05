@@ -1,0 +1,43 @@
+baseurl = "https://example.com/"
+languageCode = "en-US"
+title = "Will Bonnell"
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""
+theme = "hugo-sustain"
+
+[permalinks]
+  post = "/:year/:month/:day/:slug"
+
+[params]
+  avatar = "profile.jpg"
+  author = "William Bonnell"
+  description = "Please help me change this shit"
+
+  # Custom assets can be linked with their paths relative to static/
+  custom_css = []
+  custom_js  = []
+
+[params.social]
+  Github        = "willdebras"
+  Email         = "wtb3na@virginia.edu"
+  Twitter       = "_willdebras"
+  LinkedIn      = "william-bonnell-85982b3a"
+
+## Main Menu
+[[menu.main]]
+  name = "blog"
+  weight = 100
+  identifier = "blog"
+  url = "/blog/"
+[[menu.main]]
+  name = "projects"
+  identifier = "projects"
+  weight = 200
+  url = "/projects/"
+[[menu.main]]
+  name = "CV"
+  identifier = "cv"
+  weight = 300
+  url = "/cv"
