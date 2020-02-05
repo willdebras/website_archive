@@ -8,8 +8,8 @@ features = ["responsive", "syntax highlighting"]
 min_version = 0.17
 
 [author]
-  name = "Nurlan Su"
-  homepage = "https://github.com/nurlansu"
+  name = "Will Bonnell"
+  homepage = "https://willdebras.github.io"
 
 # If porting an existing theme
 [original]
