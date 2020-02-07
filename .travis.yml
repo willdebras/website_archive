@@ -10,6 +10,8 @@ branches:
 r_packages: 
     - ggplot2
     - dplyr
+    - gganimate
+    - gifski
         
 r_github_packages:
     - rstudio/blogdown

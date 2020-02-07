@@ -50,3 +50,68 @@ ggplot2::autoplot(mb) +
 ```
 
 ![](/img/distribution.png)
+
+These plots are great for allowing an individual to infer density of values (or probabilities). They could potentially say "about 50% of all tests in both of these tests fall around 30-35 seconds." This is good for conveying the inference that these tests do not have much difference in run time. 
+
+# Alternatives 
+
+In the era of modern data visualisation we have more tools at hand than conventional depictions of uncertainty in error bars or violin plots. A recent development in conveying of uncertainty is the innovation of hypothetical outcome plots (HOPs), which are animated plots or graphs that show potential values in a distribution (e.g. Bayesian MCMC sampled data, bootstrapped data, or a real distribution like our plot above). 
+
+HOPs have the advantage of requiring relatively little background knowledge to interpret as they only require a viewer to understand a single real value at different times. In [testing on subjects](http://users.eecs.northwestern.edu/~jhullman/HOPS_PLOS_preprint.pdf), these outperformed error bars consistently and outperformed violin plots in certain one-variable trials. Subjects were better able to estimate cumulative densities when variance was low when using HOPs than violin plots or error bars.
+
+# Creating HOPs
+
+Creating HOPs in R is pretty simple with {gganimate}. For a one-variable trials like Hullman, Resnick, and Adar create, we can use `geom_errorbar()` as we did above, but we will add a `transition_states()` call to animate it. 
+
+Let's look at our benchmark data:
+
+```{r bench}
+
+mb <- read.csv("mbtest.csv")
+head(mb)
+
+```
+
+We simply need to assign frame to each of these expressions and then set the `transition_states()` function to reference frame. In this case we want `frame` to equal `1` for one of each function, and then `frame` to equal `2` for one of each function, and so on. We can just use the rep function to assiign this column. Frame should be unique for whatever you are animating. This is the output we will feed into our ggplot:
+
+```{r frame}
+mb1 <- mb %>%
+  mutate(expr = as.character(expr)) %>%
+  mutate(frame = rep(1:(100/2), each = 2))
+
+head(mb1)
+
+```
+
+Then we create our `ggplot()` with the data argument set to the data set and the aesthetics set to expr and time like we would set up a normal bar chart, but instead of using geom_bar() we will just use `geom_errorbar()` and then animate its movement. We set `transition_states()` to reference the `frame` column and then can set the `transition_length` parameter to equal 2 frames. 
+
+```{r ggpl}
+library(gganimate)
+library(gifski)
+ggplot(mb1, aes(expr, time)) + 
+  geom_errorbar(aes(ymin = time, ymax = time)) + 
+  theme_minimal() +
+  theme(axis.title.y = element_text(margin = margin(r = 20))) +
+  transition_states(frame, transition_length = 2, state_length = 1) +
+  enter_fade() + 
+  exit_shrink() 
+
+```
+
+We can then add a `shadow_mark()` element to keep the past and future frames of the animation so you can see all the potential values and set these to a light grey so they don't interrupt the animation:
+
+```{r gg}
+ggplot(mb1, aes(expr, time)) + 
+  geom_errorbar(aes(ymin = time, ymax = time)) + 
+  theme_minimal() +
+  theme(axis.title.y = element_text(margin = margin(r = 20))) +
+  transition_states(frame, transition_length = 2, state_length = 1) +
+  enter_fade() + 
+  exit_shrink() +
+  ease_aes('sine-in-out') +
+  shadow_mark(past = TRUE, future = TRUE, color = "#d3d3d3") + 
+  labs(x = "Function", y = "Time to run")
+
+```
+
+Voila! Our first hypothetical outcome plot.
