@@ -49,4 +49,4 @@ ggplot2::autoplot(mb) +
 
 ```
 
-![an image](distribution.png)
+![](/img/distribution.png)
