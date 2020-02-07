@@ -8,7 +8,6 @@ tags: ["ggplot2", "dataviz", "gganimate", "uncertainty"]
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
-library(ggplot2)
 ```
 
 # The Uncertainty of Uncertainty

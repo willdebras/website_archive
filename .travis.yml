@@ -6,6 +6,11 @@ branches:
     only:
         - website-source
         
+        
+r_packages: 
+    ggplot2
+    dplyr
+        
 r_github_packages:
     - rstudio/blogdown
 
