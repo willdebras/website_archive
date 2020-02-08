@@ -67,7 +67,7 @@ Let's look at our benchmark data:
 
 ```{r bench}
 
-mb <- read.csv("mbtest.csv")
+mb <- read.csv("/data/mbtest.csv")
 head(mb)
 
 ```
