@@ -87,7 +87,7 @@ Then we create our `ggplot()` with the data argument set to the data set and the
 
 ```{r ggpl, cache = TRUE}
 library(gganimate)
-library(gifski)
+library(magick)
 ggplot(mb1, aes(expr, time)) + 
   geom_errorbar(aes(ymin = time, ymax = time)) + 
   theme_minimal() +
