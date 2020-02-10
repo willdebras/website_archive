@@ -49,7 +49,7 @@ ggplot2::autoplot(mb) +
 
 ```
 
-![](distribution.png)
+![](/img/distribution.png)
 
 These plots are great for allowing an individual to infer density of values (or probabilities). They could potentially say "about 50% of all tests in both of these tests fall around 30-35 seconds." This is good for conveying the inference that these tests do not have much difference in run time. 
 
@@ -67,7 +67,7 @@ Let's look at our benchmark data:
 
 ```{r bench}
 
-mb <- read.csv("mbtest.csv")
+mb <- read.csv("/data/mbtest.csv")
 head(mb)
 
 ```
