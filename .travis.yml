@@ -16,6 +16,13 @@ r_packages:
         
 r_github_packages:
     - rstudio/blogdown
+    
+addons:
+  apt:
+    update: true
+    packages:
+      - libmagick++
+      - cargo
 
 before_script:
     - Rscript -e 'blogdown::install_hugo()'
