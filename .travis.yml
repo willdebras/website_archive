@@ -12,7 +12,7 @@ r_packages:
     - dplyr
     - gganimate
     - png
-    - magick
+    - gifski
         
 r_github_packages:
     - rstudio/blogdown
