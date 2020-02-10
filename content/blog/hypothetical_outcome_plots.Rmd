@@ -101,7 +101,7 @@ ggplot(mb1, aes(expr, time)) +
 
 We can then add a `shadow_mark()` element to keep the past and future frames of the animation so you can see all the potential values and set these to a light grey so they don't interrupt the animation:
 
-```{r gg, cache = TRUE, eval = FALSE}
+```{r gg, cache = TRUE}
 ggplot(mb1, aes(expr, time)) + 
   geom_errorbar(aes(ymin = time, ymax = time)) + 
   theme_minimal() +
