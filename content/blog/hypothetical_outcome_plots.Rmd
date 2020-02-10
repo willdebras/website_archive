@@ -114,4 +114,8 @@ ggplot(mb1, aes(expr, time)) +
 
 ```
 
-Voila! We have our first one-variable hypothetical outcome plot. 
+Voila! We have our first one-variable hypothetical outcome plot representing the distribution of our code benchmarks above. 
+
+# More examples
+
+For more information about how one can create synthetic/simulated data for the creation of HOPs, I recommend Claus Wilke's `rstudio::conf` [2019 presentation](https://resources.rstudio.com/rstudio-conf-2019/visualizing-uncertainty-with-hypothetical-outcomes-plots) on the subject. His slides have examples of bootstrapping and sampling data for inclusion in HOPs.

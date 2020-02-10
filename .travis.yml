@@ -12,6 +12,7 @@ r_packages:
     - dplyr
     - gganimate
     - gifski
+    - rlang
         
 r_github_packages:
     - rstudio/blogdown
