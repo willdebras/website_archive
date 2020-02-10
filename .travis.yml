@@ -11,8 +11,8 @@ r_packages:
     - ggplot2
     - dplyr
     - gganimate
+    - png
     - gifski
-    - rlang
         
 r_github_packages:
     - rstudio/blogdown
