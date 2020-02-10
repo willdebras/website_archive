@@ -12,7 +12,7 @@ knitr::opts_chunk$set(collapse = TRUE)
 
 # The Uncertainty of Uncertainty
 
-Conveying uncertainty in data visualisations has become a growing topic in data visualisation circles in the past few years. When considering how to visualise data, one must consider who their audience is and how that audience might interpret a visualisation. In the same way writers adopt different styles of writing to convey information to different audiences, dataviz practioners might choose color, layout, or typography to suit different audiences (e.g. making a color palette color blind friendly or right-aligning a visualization designed for [RTL-writing](https://en.wikipedia.org/wiki/Right-to-left) communities. The options a dataviz practitioner has though are not limited only to the aesthetic design choices. The practitioner's decision to use a certain type of visualisation itself is contingent on the audience's ability to understand it. 
+Conveying uncertainty in data visualisations has become a growing topic in data visualisation circles in the past few years. When considering how to visualise data, one must consider who their audience is and how that audience might interpret a visualisation. In the same way writers adopt different styles of writing to convey information to different audiences, dataviz practitioners might choose color, layout, or typography to suit different audiences (e.g. making a color palette color blind friendly or right-aligning a visualization designed for [RTL-writing](https://en.wikipedia.org/wiki/Right-to-left) communities). The options a dataviz practitioner has though are not limited only to the aesthetic design choices. The practitioner's decision to use a certain type of visualisation itself is contingent on the audience's ability to understand it. 
 
 This is especially true when visualising the uncertainty we as researchers know exist. While a statistician or analyst in your company or academic department might understand the error bars on a bar chart you send them, the average person might not. This has prompted discussion about ways we visualise uncertainty.
 
@@ -20,7 +20,7 @@ This is especially true when visualising the uncertainty we as researchers know 
 
 Conventionally, one might express the uncertainty of a mean value by creating a confidence interval of the difference of a mean and standard deviation. We could express that deviation in an error bar, like such:
 
-```{r error, fig.cap="Error bars on Iris data"}
+```{r error}
 library(ggplot2)
 library(dplyr)
 
@@ -42,7 +42,7 @@ While this creates clarity that there is *some* uncertainty, it might also conve
 
 Say we ran a benchmark on two functions to test if one was faster than another. We could run it a few hundred times and create distributions of these two benchmarks and plot them:
 
-```{r vio, fig.cap="Violin plot of benchmarks", warning = FALSE, message = FALSE, eval = FALSE}
+```{r vio, warning = FALSE, message = FALSE, eval = FALSE}
 mb <- microbenchmark(x, y, n = 50)
 ggplot2::autoplot(mb) +
   theme_minimal()
@@ -72,7 +72,7 @@ head(mb)
 
 ```
 
-We simply need to assign frame to each of these expressions and then set the `transition_states()` function to reference frame. In this case we want `frame` to equal `1` for one of each function, and then `frame` to equal `2` for one of each function, and so on. We can just use the rep function to assiign this column. Frame should be unique for whatever you are animating. This is the output we will feed into our ggplot:
+We simply need to assign `frame` to each of these expressions and then set the `transition_states()` function to reference `frame`. In this case we want `frame` to equal `1` for one of each function, and then `frame` to equal `2` for one of each function, and so on. We can just use the rep function to assign this column. Frame should be unique for whatever you are animating. This is the output we will feed into our ggplot:
 
 ```{r frame}
 mb1 <- mb %>%
