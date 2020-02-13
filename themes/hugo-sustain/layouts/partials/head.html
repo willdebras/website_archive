@@ -7,6 +7,7 @@
     <meta name="author" content="{{ .Site.Params.Author }}" />
     {{ if .Site.Params.description }}<meta name="description" content="{{ .Site.Params.description }}">{{ end }}
     <link rel="shortcut icon" type="image/x-icon" href="{{ .Site.BaseURL }}favicon.ico">
+    <link rel="icon" type="image/x-icon" href="{{ .Site.BaseURL }}favicon.ico">
     <title>
     {{- $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" -}}
     {{- if eq $url "/" -}}
