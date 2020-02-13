@@ -85,7 +85,7 @@ head(mb1)
 
 Then we create our `ggplot()` with the data argument set to the data set and the aesthetics set to expr and time like we would set up a normal bar chart, but instead of using geom_bar() we will just use `geom_errorbar()` and then animate its movement. We set `transition_states()` to reference the `frame` column and then can set the `transition_length` parameter to equal 2 frames. 
 
-```{r ggpl}
+```{r ggpl, cache = TRUE}
 library(gganimate)
 library(gifski)
 ggplot(mb1, aes(expr, time)) + 
