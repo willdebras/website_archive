@@ -21,10 +21,7 @@ addons:
   apt:
     update: true
     packages:
-      - libfreetype6
       - libmagick++-dev
-      - cargo
-      - libavfilter-dev
     sources:
       - sourceline: 'ppa:cran/ffmpeg-4'
       - sourceline: 'ppa:cran/ffmpeg-3'
