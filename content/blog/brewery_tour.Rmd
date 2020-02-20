@@ -1,0 +1,11 @@
+---
+title: "Mapping a Brewery Tour"
+author: "Will Bonnell"
+date: 2020-02-17
+categories: ["R"]
+tags: ["beer", "dataviz", "leaflet", "webscraping", "ggplot2", "ggmap"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
