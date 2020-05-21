@@ -3,7 +3,7 @@
     float:left;
     position: relative;
     width: 30%;
-    padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+    padding-bottom : 20%; /* = width for a 1:1 aspect ratio */
     margin:1.66%;
     background-color:#1E1E1E;
     overflow:hidden;
@@ -28,7 +28,7 @@
 }
 /*  For list */
 
-
+/*
 .ul{
     text-align:left;
     margin:5% 0 0;
@@ -60,10 +60,10 @@
 }
 
 .img1{
-    background-image: url('https://farm3.staticflickr.com/2827/10384422264_d9c7299146.jpg');
+    background-image: url('https://willdebras.github.io/img/voc_ed.png');
 }
 .img2{
-    background-image: url('https://farm7.staticflickr.com/6217/6216951796_e50778255c.jpg');
+    background-image: url('https://willdebras.github.io/img/nec_green.png');
 }
 .img3{
     background-image: url('https://farm4.staticflickr.com/3794/13893055574_3df0ab636b.jpg');
@@ -99,21 +99,50 @@ p{
     border:1px solid #fff;
 }
 
-.square:hover .content {
+/*
+.square:hover .img1 {
+  background-image: url('https://willdebras.github.io/img/voc_ed.png');
   visibility: visible;
   opacity: 0.2;
-  background: linear-gradient(135deg, orange, orange 60%, cyan);
+
 }
+
+.square:hover .img2 {
+  background-image: url('https://farm7.staticflickr.com/6217/6216951796_e50778255c.jpg');
+  visibility: visible;
+  opacity: 0.2;
+
+}
+*/
 
 .square:hover .invis {
   visibility: visible;
   opacity: 1;
   color:white;
+  font-size:20px;
+font-family: 'Cinzel', serif;
+  color: #fff;
+    text-align:center;
+  background: radial-gradient(farthest-corner, rgba(255,195,77,0.5), rgba(255,105,0,.7));
 }
 
 .invis {
   color: white;
   visibility: hidden;
   opacity: 0;
-  position:absolute;
 }
+
+.opt {
+    font-size:28px;
+font-family: 'Cinzel', serif;
+    text-align:center;
+
+}
+
+.rale {
+    font-size:20px;
+font-family: 'Raleway', sans-serif;
+    text-align:center;
+
+}
+
