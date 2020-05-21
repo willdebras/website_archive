@@ -1,11 +1,17 @@
 {{ partial "head" . }}
   <body>
+    
+
+    
     <div id="wrap">
 
       <!-- Header -->
       {{ partial "header" . }}
+
       {{ if isset .Params "showpagemeta" }}
         {{ .Render "projects" }}
+      {{ else if isset .Params "viz" }}
+        {{ .Render "viz" }}
       {{ else }}
       <div class="container">
         <div class="blog-post">

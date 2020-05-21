@@ -42,3 +42,8 @@ theme = "hugo-sustain"
   identifier = "cv"
   weight = 300
   url = "/cv"
+[[menu.main]]
+  name = "dataviz"
+  weight = 250
+  identifier = "viz"
+  url = "/viz/"
