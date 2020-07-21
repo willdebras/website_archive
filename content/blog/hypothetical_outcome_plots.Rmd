@@ -3,7 +3,7 @@ title: "Hypothetical Outcome Plots"
 author: "Will Bonnell"
 date: 2020-02-05
 categories: ["R"]
-tags: ["ggplot2", "dataviz", "gganimate", "uncertainty"]
+tags: ["ggplot2", "dataviz", "gganimate", "uncertainty", "hypothetical outcome plots", "HOPs", "rstats"]
 ---
 
 ```{r setup, include=FALSE}

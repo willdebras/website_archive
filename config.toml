@@ -14,7 +14,7 @@ theme = "hugo-sustain"
 [params]
   avatar = "profile.jpg"
   author = "William Bonnell"
-  description = "Will Bonnell -- Researcher, programmer, dataviz enthusiast"
+  description = "Will Bonnell's personal website, data visualisation and visualization and design portfolio, professional CV, and blog"
 
   # Custom assets can be linked with their paths relative to static/
   custom_css = []
